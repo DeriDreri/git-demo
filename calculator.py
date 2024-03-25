@@ -14,7 +14,7 @@ def subtract(a: int|float, b: int|float) -> int|float:
     return a - b
 
 def multiply(*numbers: int|float) -> int|float:
-    mul_val = 0
+    mul_val = 1 
     for n in numbers:
         mul_val *= n
 
@@ -29,7 +29,7 @@ def split_by_operators(s:str) -> list[str]:
 
 def make_operation(eq_todo):
     operator = eq_todo[1]
-    if operator == "+": return add(eq_todo[0], eq_todo[2])
+    if operator == "+": return add(int(eq_todo[0]),int(eq_todo[2]))
     elif operator == "-": return subtract(eq_todo[0], eq_todo[2])
     elif operator == "\\": return divide(eq_todo[0], eq_todo[2])
     else: return multiply(eq_todo[0], eq_todo[2])
