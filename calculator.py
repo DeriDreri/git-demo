@@ -30,9 +30,9 @@ def split_by_operators(s:str) -> list[str]:
 def make_operation(eq_todo):
     operator = eq_todo[1]
     if operator == "+": return add(int(eq_todo[0]),int(eq_todo[2]))
-    elif operator == "-": return subtract(eq_todo[0], eq_todo[2])
-    elif operator == "\\": return divide(eq_todo[0], eq_todo[2])
-    else: return multiply(eq_todo[0], eq_todo[2])
+    elif operator == "-": return subtract(int(eq_todo[0]),int(eq_todo[2]))
+    elif operator == "\\": return divide(int(eq_todo[0]),int(eq_todo[2]))
+    else: return multiply(int(eq_todo[0]),int(eq_todo[2]))
 
 def main():
     eq = sys.argv[1]
